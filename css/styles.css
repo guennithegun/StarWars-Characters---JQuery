@@ -1,0 +1,205 @@
+:root {
+  --primary-color: #E84855;
+  --primary-color-transparent: rgba(232, 72, 85, 0.8);
+  --secondary-color: #444A48;
+  --tertiary-color: #FAFAFA;
+  --text-color: #2b2b2b;
+  --font-size-basic: 16px;
+  --font-size-h1: 36px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-weight-basic: 400;
+  --font-weight-headers: 700;
+  --line-height-basic: 1.6;
+}
+
+/* Basics */
+
+html {
+  background: url("../img/landscape.jpg") no-repeat center right fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: var(--font-weight-basic);
+  font-size: var(--font-size-basic);
+  line-height: var(--line-height-basic);
+  color: var(--text-color);
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-headers);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-headers);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-headers);
+}
+
+hr {
+  max-width: 700px;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(107, 241, 120, 0), rgba(107, 241, 120, 0.75), rgba(107, 241, 120, 0));
+}
+
+/* Header */
+
+.page-header {
+  text-align: center;
+}
+.page-header__item {
+  color: var(--tertiary-color);
+}
+
+/* Content */
+
+.content {
+  margin: 50px auto;
+}
+
+.content ul {
+  padding: 0;
+}
+
+.content__item {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  background-color: var(--primary-color-transparent);
+  border-radius: 5px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__item--button {
+  border: 1px solid var(--tertiary-color);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--tertiary-color);
+  cursor: url("../img/light_saber_green.png"), auto;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.highlight {
+  color: var(--tertiary-color);
+}
+
+/* Modal */
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 30, 92, 0.5);
+  z-index: 999;
+  overflow: auto;
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  background-color: white;
+  background-image: url("../img/space.png");
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  color: #F9C22E;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+.button-element {
+  text-align: right;
+}
+
+.modal-close {
+  border: 0;
+  text-decoration: underline;
+  text-decoration-color: rgb(107, 241, 120);
+  font-weight: 700;
+  background: none;
+  color: var(--primary-color);
+  cursor: url("../img/light_saber_green.png"), auto;
+}
+
+.modal h1 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+.image-container {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  border-bottom: 1px solid #F9C22E;
+  color: #F9C22E;
+}
+
+.character-image {
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+.footer_item {
+  color: var(--tertiary-color);
+}
+
+@media all and (min-width: 700px) {
+  .content {
+    max-width: 700px;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  html {
+    background: url("../img/landscape.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
