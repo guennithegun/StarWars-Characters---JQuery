@@ -161,16 +161,6 @@ button:focus {
   text-align: right;
 }
 
-/*.modal-close {
-  border: 0;
-  text-decoration: underline;
-  text-decoration-color: rgb(107, 241, 120);
-  font-weight: 700;
-  background: none;
-  color: var(--primary-color);
-  cursor: url("../img/light_saber_green.png"), auto;
-}*/
-
 .modal-close {
   background: none;
   border: 0;
