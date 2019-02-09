@@ -117,7 +117,7 @@ var starwarsRepository = (function () {
   }
 
 // eventListeners for closing the modal by pressing ESC or clicking outside modal
-  $('window').on('keydown', function(event) { // press ESC
+  $(window).on('keydown', function(event) { // press ESC
     var $modalContainer = $('#modal-container');
 
     if (event.key === "Escape" && $modalContainer.hasClass('is-visible')) {
@@ -127,8 +127,7 @@ var starwarsRepository = (function () {
 
   var $modalContainer = $('#modal-container'); // click outside modal
   $modalContainer.on('click', function(event) {
-    var target = event.target;
-    if (target === $modalContainer) {
+    if ($(event.target).is($modalContainer)) {
       hideModal();
     }
   });
