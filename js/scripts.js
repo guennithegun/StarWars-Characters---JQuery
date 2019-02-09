@@ -94,26 +94,24 @@ var starwarsRepository = (function () {
 
 // loading the characters from API
   function loadList() {
-    $.ajax(apiURL, {dataType: 'json'})
+    return $.ajax(apiURL, {dataType: 'json'})
       .then(function (response) {
-        return response.responseJSON;
-      }).then(function (json) {
-        $.response.each(function (item) {
+        response.forEach(function (item) {
           var character = {
-            name: $(this).name,
-            mass: $(this).mass,
-            height: $(this).height,
-            gender: $(this).gender,
-            homeworld: $(this).homeworld,
-            species: $(this).species,
-            more: $(this).wiki,
-            img: $(this).image
+            name: item.name,
+            mass: item.mass,
+            height: item.height,
+            gender: item.gender,
+            homeworld: item.homeworld,
+            species: item.species,
+            more: item.wiki,
+            img: item.image
           };
           add(character);
         });
-     }).catch(function (e) {
+      }).catch(function (e) {
           console.error(e);
-     });
+        });
   }
 
 // eventListeners for closing the modal by pressing ESC or clicking outside modal
