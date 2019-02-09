@@ -80,6 +80,8 @@ var starwarsRepository = (function () {
     $modalContainer.append(modal);
 
     $modalContainer.addClass('is-visible'); // add class to show modal
+    $modalContainer
+      .velocity('fadeIn', { duration: 500 });
   }
 
   function hideModal() {
