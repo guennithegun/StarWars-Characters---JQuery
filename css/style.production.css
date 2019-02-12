@@ -60,6 +60,39 @@ hr {
 
 /* Content */
 
+#searchInput {
+  width: 10em;
+  height: 40px;
+  border: 2px solid #F9C22E;
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: #F9C22E;
+  outline: none;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+#searchInput:focus {
+  width: 15em;
+}
+
+::-webkit-input-placeholder {
+  color: #F9C22E;
+}
+
+:-ms-input-placeholder {
+  color: #F9C22E;
+}
+
+::-ms-input-placeholder {
+  color: #F9C22E;
+}
+
+::placeholder {
+  color: #F9C22E;
+}
+
 .content {
   margin: 50px auto;
 }

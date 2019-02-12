@@ -71,6 +71,25 @@ hr {
 
 /* Content */
 
+#searchInput {
+  width: 10em;
+  height: 40px;
+  border: 2px solid #F9C22E;
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: #F9C22E;
+  outline: none;
+	transition: width 0.5s ease-in-out;
+}
+
+#searchInput:focus {
+  width: 15em;
+}
+
+::placeholder {
+  color: #F9C22E;
+}
+
 .content {
   margin: 50px auto;
 }
