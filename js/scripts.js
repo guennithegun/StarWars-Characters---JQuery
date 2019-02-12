@@ -117,6 +117,16 @@ var starwarsRepository = (function () {
           /* eslint-disable no-console */
         });
   }
+// search character
+
+  $(document).ready(function(){
+    $('#searchInput').on('keyup', function() {
+      var value = $(this).val().toLowerCase();
+      $('#listOfCharacters li').filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
 
 // eventListeners for closing the modal by pressing ESC or clicking outside modal
   $(window).on('keydown', function(event) { // press ESC
@@ -139,6 +149,7 @@ var starwarsRepository = (function () {
    getAll: getAll,
    addListItem: addListItem,
    showDetails: showDetails,
+   //searchCharacter: searchCharacter,
    loadList: loadList
   };
 
