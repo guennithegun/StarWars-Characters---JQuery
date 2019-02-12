@@ -30,10 +30,10 @@ var starwarsRepository = (function () {
     $newListElement.append($newSpanElement);
     $newListElement.append($newButtonElement);
     // add event listener
-    $newButtonElement.on('click', function (event) {
+    $newButtonElement.on('click', function () { // deleted event
       showDetails(character);
     });
-    $newButtonElement.on('click', function (event) {
+    $newButtonElement.on('click', function () { //deleted event
       var audio = new Audio('files/lasrhit4.mp3');
       audio.play();
     });
@@ -112,7 +112,9 @@ var starwarsRepository = (function () {
           add(character);
         });
       }).catch(function (e) {
+          /* eslint-disable no-console */
           console.error(e);
+          /* eslint-disable no-console */
         });
   }
 
@@ -120,7 +122,7 @@ var starwarsRepository = (function () {
   $(window).on('keydown', function(event) { // press ESC
     var $modalContainer = $('#modal-container');
 
-    if (event.key === "Escape" && $modalContainer.hasClass('is-visible')) {
+    if (event.key === 'Escape' && $modalContainer.hasClass('is-visible')) {
       hideModal();
     }
   });
